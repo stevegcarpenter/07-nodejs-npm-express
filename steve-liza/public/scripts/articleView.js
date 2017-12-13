@@ -103,9 +103,7 @@ articleView.create = () => {
 
   $('#articles').append(article.toHtml());
 
-  $('pre code').each(function(i, block) {
-    hljs.highlightBlock(block);
-  });
+  $('pre code').each((i, block) => hljs.highlightBlock(block));
 
   $('#export-field').show();
   $('#article-json').val(`${JSON.stringify(article)},`);
