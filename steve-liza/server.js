@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 
 //if the user types /new route they will be served up new.html 
 app.get('/new', (req, res) => {
-  res.status(200).sendfile('./public/new.html');
+  res.status(200).sendFile('new.html', {'root': __dirname + '/public/'});;
 });
 
 app.use((req,res) => {
