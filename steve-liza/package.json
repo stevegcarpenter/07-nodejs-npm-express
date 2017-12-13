@@ -1,0 +1,25 @@
+{
+  "name": "steve-liza",
+  "version": "1.0.0",
+  "description": "creating server with node.js express first implementation ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevegcarpenter/07-nodejs-npm-express.git"
+  },
+  "author": "steve liza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevegcarpenter/07-nodejs-npm-express/issues"
+  },
+  "homepage": "https://github.com/stevegcarpenter/07-nodejs-npm-express#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "nodemon": "^1.12.6"
+  }
+}
