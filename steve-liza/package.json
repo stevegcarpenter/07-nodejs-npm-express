@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/stevegcarpenter/07-nodejs-npm-express/issues"
   },
-  "homepage": "https://github.com/stevegcarpenter/07-nodejs-npm-express#readme"
+  "homepage": "https://github.com/stevegcarpenter/07-nodejs-npm-express#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
