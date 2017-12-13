@@ -14,11 +14,7 @@ const PORT = process.env.PORT || 3000;
 
 //if the user types /new route they will be served up new.html
 app.get('/new', (req, res) => {
-  res.status(200).sendFile('new.html', {'root': __dirname + '/public/'});;
-});
-
-app.use((req,res) => {
-  res.status(404).send('404: Error, page does not exist');
+  res.status(200).sendFile('new.html', {'root': __dirname + '/public/'});
 });
 
 app.post('/articles', bodyParser, (req, res) => {
@@ -28,3 +24,7 @@ app.post('/articles', bodyParser, (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
+
+app.use((request, response) => {
+  response.status(404).send('404: Error, page does not exist');
+});
