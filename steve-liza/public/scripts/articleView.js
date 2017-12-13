@@ -74,7 +74,7 @@ articleView.setTeasers = () => {
 };
 
 // COMMENT: When/where is this function invoked? What event ultimately triggers its execution? Explain the sequence of code execution when this function is invoked.
-// PUT YOUR RESPONSE HERE
+// This function is called in new.html. When the user types in the route (/new) the app.get method on server.js ultimately triggers this execution by serving up the new.html page. Following new.html being served up the script tag at the bottom of new.html which will call initNewArticlePage. 
 articleView.initNewArticlePage = () => {
   $('.tab-content').show();
   $('#export-field').hide();
@@ -87,7 +87,7 @@ articleView.initNewArticlePage = () => {
 };
 
 // COMMENT: When is this function called? What event ultimately triggers its execution?
-// PUT YOUR RESPONSE HERE
+// This function is called everytime the focus changes on the form input fields. Delegation is used to specify articleView.create as the callback function for whenever focus changes on the input or textarea in the form. 
 articleView.create = () => {
   let article;
   $('#articles').empty();
@@ -112,7 +112,7 @@ articleView.create = () => {
 };
 
 // COMMENT: When is this function called? What event ultimately triggers its execution?
-// PUT YOUR RESPONSE HERE
+// This function is called whenever the submit button is pressed because of an event listener. 
 articleView.submit = event => {
   event.preventDefault();
   let article = new Article({
@@ -125,7 +125,7 @@ articleView.submit = event => {
   });
 
   // COMMENT: Where is this function defined? When is this function called? What event ultimately triggers its execution?
-  // PUT YOUR RESPONSE HERE
+  // It is a new method that is defined for the Article construtor as a prototype method. Once the user fills in the form and clicks the submit button on the new page this will insert the article into the index.html. 
   article.insertRecord();
 }
 
