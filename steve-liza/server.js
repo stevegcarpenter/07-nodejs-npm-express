@@ -17,6 +17,10 @@ app.get('/new', (req, res) => {
   res.status(200).sendfile('./public/new.html');
 });
 
+app.use((req,res) => {
+  res.status(404).send('404: Error, page does not exist');
+});
+
 app.post('/articles', bodyParser, function(request, response) {
   // REVIEW: This route will receive a new article from the form page, new.html, and log that form data to the console. We will wire this up soon to actually write a record to our persistence layer!
   console.log(request.body);
